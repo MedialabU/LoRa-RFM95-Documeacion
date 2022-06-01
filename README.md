@@ -6,7 +6,7 @@ Esta PCB sirve para integrar fácilmente el módulo transceptor RFM95W en proyec
 
 ![Diseño3D_1](/Fotos/Diseño3D_1.png)
 
-![Diseño3D_2](Celia%20PRIVADA%2077de56e9b721404fa09241322e39240c/Untitled%204.png)
+![Diseño3D_2](/Fotos/Diseño3D_2.png)
 
 Es un transceptor basado en LoRa SX1276 con interfaz SPI. Se alimenta con 3.3V. Para un funcionamiento adecuado es necesario conectar como mínimo los pines **SPI**:
 
@@ -51,21 +51,20 @@ const lmic_pinmap lmic_pins = {
 
 Las primeras pruebas se realizaron con una PCB de prototipado y una antena helicoidal. Con este primer prototipo se hicieron las pruebas de conexión y librerías de cara a diseñas la PCB final.
 
-![Prototipo](Celia%20PRIVADA%2077de56e9b721404fa09241322e39240c/Untitled%205.png)
+![Prototipo](/Fotos/Prototipo.png)
 
 ### Diseño:
 
-![Diseño1](Celia%20PRIVADA%2077de56e9b721404fa09241322e39240c/Untitled%206.png)
+![Diseño1](C/Fotos/Diseño1.png)
 
-![Diseño2](Celia%20PRIVADA%2077de56e9b721404fa09241322e39240c/Untitled%207.png)
+![Diseño2](/Fotos/Diseño2.png)
 
 ### Resultado final:
-![ResultadoFinal3](Celia%20PRIVADA%2077de56e9b721404fa09241322e39240c/Untitled%2010.png)
+![ResultadoFinal3](/Fotos/ResultadoFinal3.png)
 
-![ResultadoFinal1](Celia%20PRIVADA%2077de56e9b721404fa09241322e39240c/Untitled%208.png)
+![ResultadoFinal1](/Fotos/ResultadoFinal1.png)
 
-![ResultadoFinal2](Celia%20PRIVADA%2077de56e9b721404fa09241322e39240c/Untitled%209.png)
-
+![ResultadoFinal2](/Fotos/ResultadoFinal2.png)
 
 ### ****Conexionado RFM95 y Arduino Mini Pro****
 
@@ -97,7 +96,7 @@ IMP: SOLDAR LA ANTENA 2 + SU JUMPER  (La de 5 puntos)
 
 ### Datasheet:
 
-![Untitled](Celia%20PRIVADA%2077de56e9b721404fa09241322e39240c/Untitled%2011.png)
+![Datasheet](/Fotos/Datasheet.png)
 
 ### Envío de datos al dispositivo TTN:
 
@@ -117,9 +116,8 @@ humedad: 2 bytes
 
 ### Crear dispositivo TTN en la web
 
-Entramos en la página web (se da por hecho que tenemos un perfil creado):
+Entramos en la [página web](https://eu1.cloud.thethings.network/console/ ) (se da por hecho que tenemos un perfil creado):
 
-[ ](https://eu1.cloud.thethings.network/console/ )
 
 Go to applications -> Creamos aplicación “vp2-medialab” -> Creamos dispositivo -> Manually escogiendo:
 
