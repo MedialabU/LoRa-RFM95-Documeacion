@@ -55,7 +55,7 @@ Las primeras pruebas se realizaron con una PCB de prototipado y una antena helic
 
 ### Diseño:
 
-![Diseño1](C/Fotos/Diseño1.png)
+![Diseño1](/Fotos/Diseño1.png)
 
 ![Diseño2](/Fotos/Diseño2.png)
 
