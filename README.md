@@ -20,7 +20,7 @@ Es un transceptor basado en LoRa SX1276 con interfaz SPI. Se alimenta con 3.3V. 
 - 3V3
 - GND
 
-### Definición de pines Arduino Mini Pro según librería:
+### Pin Map para Arduino Mini Pro:
 
 ```arduino
 const int NSS_GPIO = 10;
@@ -52,7 +52,7 @@ const lmic_pinmap lmic_pins = {
 | DIO1 | D3 |
 | D5   | RESET   |
 
-### Definición de pines STM32 según librería:
+### Pin Map para Black Pill STM32:
 ```
 const lmic_pinmap lmic_pins = {
     .nss = PB12,
