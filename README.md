@@ -1,1 +1,1 @@
-# LoRa-RFM95-Documeacion
+# LoRa-RFM95-Documentacion
