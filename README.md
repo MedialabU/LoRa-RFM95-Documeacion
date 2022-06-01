@@ -7,7 +7,29 @@ Esta PCB sirve para integrar fácilmente el módulo transceptor RFM95W en proyec
 ![Diseño3D_1](/Fotos/Diseño3D_1.png)
 
 ![Diseño3D_2](/Fotos/Diseño3D_2.png)
+---
+### Prototipo:
 
+Las primeras pruebas se realizaron con una PCB de prototipado y una antena helicoidal. Con este primer prototipo se hicieron las pruebas de conexión y librerías de cara a diseñas la PCB final.
+
+![Prototipo](/Fotos/Prototipo.png)
+
+### Diseño:
+
+![Diseño1](/Fotos/Diseño1.png)
+
+![Diseño2](/Fotos/Diseño2.png)
+
+### Resultado final:
+
+![ResultadoFinal3](/Fotos/ResultadoFinal3.png)
+
+![ResultadoFinal1](/Fotos/ResultadoFinal1.png)
+
+![ResultadoFinal2](/Fotos/ResultadoFinal2.png)
+
+---
+### RFM95W
 Es un transceptor basado en LoRa SX1276 con interfaz SPI. Se alimenta con 3.3V. Para un funcionamiento adecuado es necesario conectar como mínimo los pines **SPI**:
 
 - NSS
@@ -79,7 +101,7 @@ const lmic_pinmap lmic_pins = {
 | RESET   | A3   |
 
 ---
-### Componentes:
+### Componentes del montaje completo:
 
 [RFM95 - Link de Compra](https://es.aliexpress.com/item/1005003980988859.html)
 
@@ -88,36 +110,11 @@ const lmic_pinmap lmic_pins = {
 [Soporte de Antena SMA 2 - Link de Compra](https://www.amazon.es/Fydun-Conectores-conectar-Soldadura-enchufes/dp/B07YCPSF66/ref=pd_sbs_sccl_2/262-8953205-3606815)
 
 ---
-### Prototipo:
-
-Las primeras pruebas se realizaron con una PCB de prototipado y una antena helicoidal. Con este primer prototipo se hicieron las pruebas de conexión y librerías de cara a diseñas la PCB final.
-
-![Prototipo](/Fotos/Prototipo.png)
-
-### Diseño:
-
-![Diseño1](/Fotos/Diseño1.png)
-
-![Diseño2](/Fotos/Diseño2.png)
-
-### Resultado final:
-
-![ResultadoFinal3](/Fotos/ResultadoFinal3.png)
-
-![ResultadoFinal1](/Fotos/ResultadoFinal1.png)
-
-![ResultadoFinal2](/Fotos/ResultadoFinal2.png)
-
----
-
 ### Datasheet:
 
 ![Datasheet](/Fotos/Datasheet.png)
 
-
-
 ---
-
 
 ### Conectar por código con nuestro dispositivo:
 
