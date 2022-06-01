@@ -4,7 +4,7 @@
 
 Esta PCB sirve para integrar fácilmente el módulo transceptor RFM95W en proyectos de LoRa. Permite conectar dos antenas con conectores SMA hembra a macho, de tipo borde de placa o 90º. Se selecciona que conector se utiliza estañando la conexión en la cara opuesta de la placa.
 
-![Diseño3D_1](Celia%20PRIVADA%2077de56e9b721404fa09241322e39240c/Untitled%203.png)
+![Diseño3D_1](/Fotos/Diseño3D_1.png)
 
 ![Diseño3D_2](Celia%20PRIVADA%2077de56e9b721404fa09241322e39240c/Untitled%204.png)
 
