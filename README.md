@@ -37,7 +37,7 @@ const lmic_pinmap lmic_pins = {
 };
 ```
 
-
+---
 ### Componentes:
 
 [RFM95 - Link de Compra](https://es.aliexpress.com/item/1005003980988859.html)
@@ -46,7 +46,7 @@ const lmic_pinmap lmic_pins = {
 
 [Soporte de Antena SMA 2 - Link de Compra](https://www.amazon.es/Fydun-Conectores-conectar-Soldadura-enchufes/dp/B07YCPSF66/ref=pd_sbs_sccl_2/262-8953205-3606815)
 
-
+---
 ### Prototipo:
 
 Las primeras pruebas se realizaron con una PCB de prototipado y una antena helicoidal. Con este primer prototipo se hicieron las pruebas de conexión y librerías de cara a diseñas la PCB final.
@@ -65,6 +65,8 @@ Las primeras pruebas se realizaron con una PCB de prototipado y una antena helic
 ![ResultadoFinal1](/Fotos/ResultadoFinal1.png)
 
 ![ResultadoFinal2](/Fotos/ResultadoFinal2.png)
+
+---
 
 ### ****Conexionado RFM95 y Arduino Mini Pro****
 
@@ -98,6 +100,8 @@ IMP: SOLDAR LA ANTENA 2 + SU JUMPER  (La de 5 puntos)
 
 ![Datasheet](/Fotos/Datasheet.png)
 
+---
+
 ### Envío de datos al dispositivo TTN:
 
 Gracias a nuestro programa recibiremos del microcontrolador los valores de lluvia, velocidad y dirección del viento, presión, temperatura y humedad. Enviamos estos datos a nuestro dispositivo TTN en los siguientes formatos:
@@ -113,6 +117,8 @@ presión: 2 bytes
 temperatura: 2 bytes
 
 humedad: 2 bytes
+
+---
 
 ### Crear dispositivo TTN en la web
 
@@ -155,6 +161,8 @@ build_flags =
     -D DEBUG
     -D CONFIGURACIÓN_TEST1_ESTACION ; Aquí escojo mi configuración, definida en configuracion.hpp
 ```
+
+---
 
 ### Ahora que ya tenemos nuestro dispositivo, llegarán los datos:
 
@@ -228,3 +236,4 @@ function decodeUplink(input) {
 También lo enviamos desde TTN a [NodeRed](http://192.168.1.15:1880/#flow/6a3c2b6f.51d754) con un protocolo mqtt para pasarlo a formato http y después cargarlo a nuestra base de datos MySQL. 
 
 De ahí reenviamos los datos a nuestra [API](http://192.168.1.6:8000/) (programando en php) gracias a almacenarlos en la base de datos.
+---
