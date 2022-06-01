@@ -8,7 +8,7 @@ Esta PCB sirve para integrar fácilmente el módulo transceptor RFM95W en proyec
 
 ![Diseño3D_2](/Fotos/Diseño3D_2.png)
 ---
-### Prototipo:
+## Prototipo:
 
 Las primeras pruebas se realizaron con una PCB de prototipado y una antena helicoidal. Con este primer prototipo se hicieron las pruebas de conexión y librerías de cara a diseñas la PCB final.
 
