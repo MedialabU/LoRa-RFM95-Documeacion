@@ -20,7 +20,7 @@ Es un transceptor basado en LoRa SX1276 con interfaz SPI. Se alimenta con 3.3V. 
 - 3V3
 - GND
 
-**Definición de pines Arduino Mini Pro según librería:**
+### Definición de pines Arduino Mini Pro según librería:
 
 ```arduino
 const int NSS_GPIO = 10;
@@ -52,7 +52,7 @@ const lmic_pinmap lmic_pins = {
 | DIO1 | D3 |
 | D5   | RESET   |
 
-**Definición de pines STM32 según librería:**
+### Definición de pines STM32 según librería:
 ```
 const lmic_pinmap lmic_pins = {
     .nss = PB12,
@@ -150,7 +150,7 @@ build_flags =
 ---
 
 ### Ahora que ya tenemos nuestro dispositivo, llegarán los datos:
-
+PARA EL PROGRAMA DE LA ESTACIÓN METEOROLÓGICA
 Los recuperamos y en el ‘Formatter type’ en JS lo imprimimos:
 
 ```jsx
