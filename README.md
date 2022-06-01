@@ -36,6 +36,47 @@ const lmic_pinmap lmic_pins = {
     .dio = {DIO0_GPIO, DIO1_GPIO, DIO2_GPIO},
 };
 ```
+### Tabla de conexionado para Arduino Mini Pro:
+
+| RFM95 | Mini Pro|
+| ------ | ------ |
+| NSS | D10 |
+| SCK | D13 |
+| MOSI | D11 |
+| MISO | D12 |
+| ------ | ------ |
+| 3.3V | Vcc|
+| G | GND |
+| ------ | ------ |
+| DIO0 | D2 |
+| DIO1 | D3 |
+| D5   | RESET   |
+
+**Definición de pines STM32 según librería:**
+```
+const lmic_pinmap lmic_pins = {
+    .nss = PB12,
+    .rxtx = LMIC_UNUSED_PIN,
+    .rst = PA3,
+    .dio = {PA0, PA1, LMIC_UNUSED_PIN},
+};
+```
+
+### Tabla de conexionado para STM32:
+
+| RFM95 | STM32|
+| ------ | ------ |
+| NSS | B12 |
+| SCK | A5 |
+| MOSI | A7 |
+| MISO | A6 |
+| ------ | ------ |
+| 3.3V | Vcc|
+| G | GND |
+| ------ | ------ |
+| DIO0 | A0 |
+| DIO1 | A1 |
+| RESET   | A3   |
 
 ---
 ### Componentes:
@@ -60,6 +101,7 @@ Las primeras pruebas se realizaron con una PCB de prototipado y una antena helic
 ![Diseño2](/Fotos/Diseño2.png)
 
 ### Resultado final:
+
 ![ResultadoFinal3](/Fotos/ResultadoFinal3.png)
 
 ![ResultadoFinal1](/Fotos/ResultadoFinal1.png)
@@ -68,71 +110,14 @@ Las primeras pruebas se realizaron con una PCB de prototipado y una antena helic
 
 ---
 
-### ****Conexionado RFM95 y Arduino Mini Pro****
-
-Conectamos nuestro ordenador via USB al USB UART Converter* (modelo FTDI232). 
-
-Conectamos USB UART Converter al Arduino Mini Pro. 
-
-Conectamos RFM95 al Mini Pro siguiendo el siguiente conexionado:
-
-IMP: SOLDAR LA ANTENA 2 + SU JUMPER  (La de 5 puntos)
-
-*Sirve para adaptar las funciones Serial al Mini Pro, otros lo tienen incluido en su placa (son más grandes y caros).
-
-### Tabla de conexionado:
-
-| RFM95 | Mini Pro|
-| ------ | ------ |
-| NSS | D10 |
-| SCK | D13 |
-| MOSI | D11 |
-| MISO | D12 |
-| ------ | ------ |
-| 3.3V | Vcc|
-| G | GND |
-| ------ | ------ |
-| DIO0 | D2 |
-| DIO1 | D3 |
-| D5   | RESET   |
-
 ### Datasheet:
 
 ![Datasheet](/Fotos/Datasheet.png)
 
----
 
-### Envío de datos al dispositivo TTN:
-
-Gracias a nuestro programa recibiremos del microcontrolador los valores de lluvia, velocidad y dirección del viento, presión, temperatura y humedad. Enviamos estos datos a nuestro dispositivo TTN en los siguientes formatos:
-
-lluvia: 2 bytes
-
-viento: 2 bytes
-
-dirección de la veleta: 1 byte
-
-presión: 2 bytes
-
-temperatura: 2 bytes
-
-humedad: 2 bytes
 
 ---
 
-### Crear dispositivo TTN en la web
-
-Entramos en la [página web](https://eu1.cloud.thethings.network/console/ ) (se da por hecho que tenemos un perfil creado):
-
-
-Go to applications -> Creamos aplicación “vp2-medialab” -> Creamos dispositivo -> Manually escogiendo:
-
-- Europe 863-870MHz (recommended)
-- LoRaWan 1.0.3 version
-- Generate devEUI
-- Use zeros
-- Generate AppKey
-- Device id: *test1-estacion*
 
 ### Conectar por código con nuestro dispositivo:
 
@@ -236,4 +221,5 @@ function decodeUplink(input) {
 También lo enviamos desde TTN a [NodeRed](http://192.168.1.15:1880/#flow/6a3c2b6f.51d754) con un protocolo mqtt para pasarlo a formato http y después cargarlo a nuestra base de datos MySQL. 
 
 De ahí reenviamos los datos a nuestra [API](http://192.168.1.6:8000/) (programando en php) gracias a almacenarlos en la base de datos.
+
 ---
